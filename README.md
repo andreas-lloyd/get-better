@@ -38,3 +38,15 @@ OK this definitely seems like the best way forward. We are actually asking for a
 We can also add code to refresh the token later.
 
 Note that this is a server side handling - we could also handle it on the client side with javascript, if we wanted to. I guess this wouldn't require so many redirects etc.
+
+https://console.cloud.google.com/apis > real first step is to create an API
+
+1. [Enable APIs](https://developers.google.com/identity/protocols/oauth2/web-server#enable-apis):
+    * Created a project with aml gmail under learn better
+    * Then enable gmail api
+2. Create credentials
+    * The main thing here is that we have to specify a URI that we redirect to, and for development we use something like `http://localhost:8080`
+
+
+
+
