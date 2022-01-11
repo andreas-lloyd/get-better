@@ -47,6 +47,12 @@ https://console.cloud.google.com/apis > real first step is to create an API
 2. Create credentials
     * The main thing here is that we have to specify a URI that we redirect to, and for development we use something like `http://localhost:8080`
 
+Then within the app the general idea is that we need to:
+
+1. Direct the user to authorise (if they need to)
+2. Send them through the authorisation flow
+3. Save the response we get back in the session
+4. Use that response to access the API
 
 
 
