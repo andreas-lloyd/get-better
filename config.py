@@ -1,5 +1,9 @@
 # Secret location
-google_app_secret_loc = '../client_secret.json'
+GOOGLE_APP_SECRET_LOC = '../client_secret.json'
 
 # Google API scopes available here https://developers.google.com/identity/protocols/oauth2/scopes#gmail
-scopes = ['https://www.googleapis.com/auth/gmail.readonly'] 
+SCOPES = ['https://www.googleapis.com/auth/gmail.readonly'] 
+
+# Details for gmail API
+API_SERVICE_NAME = 'gmail'
+API_VERSION = 'v1'

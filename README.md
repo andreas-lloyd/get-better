@@ -45,7 +45,7 @@ https://console.cloud.google.com/apis > real first step is to create an API
     * Created a project with aml gmail under learn better
     * Then enable gmail api
 2. Create credentials
-    * The main thing here is that we have to specify a URI that we redirect to, and for development we use something like `http://localhost:8080`
+    * The main thing here is that we have to specify a URI that we redirect to, and for development we use something like `http://localhost:8080` (not sure if we need to add oauth2callback on to it)
 
 Then within the app the general idea is that we need to:
 
@@ -55,4 +55,23 @@ Then within the app the general idea is that we need to:
 4. Use that response to access the API
 
 
+OK so everything was quite straightforward:
 
+* Added oauth2callback to the URI in google cloud
+* Had to add test users in the consent screen
+* It complained that the app was authorised by google - so have to see this later in production
+
+### Step 2: Read emails once authenticated
+Now that we have authenticated, have to actually do something to access emails. This will be quite easy as we should just need to "build" the gmail API. The small annoying thing is that we are a bit limited in testing using the flask app - so maybe we should run the [quickstart](https://developers.google.com/gmail/api/quickstart/python) code as well to get used to the API.
+
+Done! The only thing to minorly watch out for was pagination. Note that the API is quite nice to work with and we can insert queries etc.
+
+### Step 3: Improve the UI
+So things are quite ugly RN - let's try and gives things a tiny bit of design using some CSS frameworks.
+
+Probably the only thing we need is a standard index page and then something for the summary. Maybe just centre the text somehow. We will do more later when we have more of a summary.
+
+### Step 4: Plan on how to deploy
+We don't necessarily want to deploy yet, but let's gather resources on how to do it and what things we need to do.
+
+https://www.thepythoncode.com/article/use-gmail-api-in-python#Searching_for_Emails
